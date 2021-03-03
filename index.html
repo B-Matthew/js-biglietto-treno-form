@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ComprailBiglietto</title>
+  </head>
+
+  <body>
+
+    <script>
+
+    var viaggioKm = prompt(" Quanti km sono per arrivare a destinazione?");
+    var etaUtente = prompt("Quanti anni hai?");
+
+    var prezzoBiglietto = viaggioKm * 0.21;
+
+    console.log ("I km percorsi sono "+ viaggioKm,"La tua età è " + etaUtente);
+
+    var sconto20 = ((prezzoBiglietto / 100) * 80).toFixed(2);
+    var sconto40 = ((prezzoBiglietto / 100) * 60).toFixed(2);
+
+
+    if (etaUtente < 18) {
+
+      console.log ("il prezzo del tuo biglietto è " + sconto20);
+    }
+    else if (etaUtente >= 65) {
+
+      console.log ("Il prezzo del tuo biglietto è " + sconto40);
+    }
+    else {
+
+      console.log ("Il prezzo del tuo biglietto è " + prezzoBiglietto);
+    }
+
+    </script>
+  </body>
+</html>
